@@ -42,6 +42,11 @@ if (!is_null($events['events'])) {
                          $responeText = "คิดถึงและห่วงใยคุณอยู่ครับ" ;
 
                         }
+                         elseif(strpos($text_ex[0], "ปุยหนัก")!== false){
+                                               
+                         $responeText = "ปุยมันอ้วน หนักตั้ง" . $text_ex[1] ;
+
+                        }
                         
                          elseif(strpos($text_ex[0], "นํ้าหนัก")!== false){
                                                
@@ -53,11 +58,7 @@ if (!is_null($events['events'])) {
                          $responeText = "นํ้าหนักของคุณคือ" . $text_ex[1] ;
 
                         }
-                         elseif(strpos($text_ex[0], "ปุยหนัก")!== false){
-                                               
-                         $responeText = "ปุยมันอ้วน หนักตั้ง" . $text_ex[1] ;
-
-                        }
+                        
                         
                             elseif(strpos($text_ex[0], "ส่วนสูง")!== false){
                                                
