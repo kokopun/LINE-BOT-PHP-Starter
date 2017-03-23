@@ -123,12 +123,14 @@ if (!is_null($events['events'])) {
                             'type' => 'text',
                           'text' => " ดาวโหลด CKD App \r\n https://play.google.com/store/apps/details?id=org.thaicarecloud.cdk.ckd_pd&hl=en"
                             ];
+                        
+                        $messages = [$messages1,$messages2 ];
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages1,$messages2],
+				'messages' => $messages,
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
