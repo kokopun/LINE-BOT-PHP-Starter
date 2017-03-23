@@ -27,7 +27,12 @@ if (!is_null($events['events'])) {
     
                         $responeText ="ไม่เข้าใจ";
                         
-                        if(strpos($text_ex[0], 'สวัสดี') !== false){
+                          if(strpos($text_ex[0], 'สวัสดีวันเสาร์') !== false){
+                            $responeText = "สวัสดีวันเสาร์ ลดเศร้า ลดเค็ม ^^";
+                            
+                        }
+                        
+                       elseif(strpos($text_ex[0], 'สวัสดี') !== false){
                             $responeText = "สวัสดีครับ CKD Care Bot ยินดีให้บริการทุกท่าน ^^";
                             
                         } 
